@@ -3,17 +3,13 @@ package com.yume.Dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.yume.Entity.Slides;
 import com.yume.Entity.MapperSlides;
+import com.yume.Entity.Slides;
 
 @Repository
-public class HomeDao {
-	@Autowired
-	public JdbcTemplate _jdbcTemplate;
+public class SlidesDao extends BaseDao{
 	
 	public List<Slides> GetDataSlide(){
 		List<Slides> list = new ArrayList<Slides>();
