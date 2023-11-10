@@ -1,4 +1,4 @@
-package com.yume.Controller.User;
+package com.yume.UserController;
 
 public class HomeController {
 
