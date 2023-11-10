@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.yume.Dto.ProductsDto;
+import com.yume.Dto.ProductsDtoMapper;
 
 public class ProductsDao extends BaseDao{
 	private final boolean YES = true;
@@ -94,7 +95,7 @@ public class ProductsDao extends BaseDao{
 		return listProducts;
 	}
 
-	private String SqlProductByID(long id) {
+	public String SqlProductByID(long id) {
 		StringBuffer sql = SqlString();
 		sql.append("WHERE 1 = 1 ");
 		sql.append("AND p.id = " + id + " ");
@@ -105,6 +106,12 @@ public class ProductsDao extends BaseDao{
 	public List<ProductsDto> GetProductByID(long id) {
 		String sql = SqlProductByID(id);
 		List<ProductsDto> listProduct = _jdbcTemplate.query(sql, new ProductsDtoMapper());
+		return listProduct;
+	}
+	
+	public ProductsDto FindProductByID(long id) {
+		String sql = SqlProductByID(id);
+		ProductsDto listProduct = _jdbcTemplate.queryForObject(sql, new ProductsDtoMapper());
 		return listProduct;
 	}
 }

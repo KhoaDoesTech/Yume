@@ -1,8 +1,14 @@
 package com.yume.Dao;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.yume.Entity.Slides;
+import com.yume.Entity.MapperSlides;
 
 public class HomeDao {
 	@Autowired

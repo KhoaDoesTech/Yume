@@ -2,13 +2,15 @@ package com.yume.Dao;
 
 import java.util.HashMap;
 
+import com.yume.Dto.CartDto;
 import com.yume.Dto.ProductsDto;
 
-public class CartDao extends BaseDao {
+
+public class CartDao extends BaseDao{
 	
-ProductsDao productsDao = new ProductsDao();
+	ProductsDao productsDao = new ProductsDao();
 	
-		public CartDto AddCart(long id, HashMap<Long, CartDto> cart) {
+	public CartDto AddCart(long id, HashMap<Long, CartDto> cart) {
 		CartDto itemCart = new CartDto();
 		ProductsDto product = productsDao.FindProductByID(id);
 		if(product != null) {
@@ -18,4 +20,5 @@ ProductsDao productsDao = new ProductsDao();
 		}
 		return itemCart;
 	}
+	
 }

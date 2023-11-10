@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.yume.Entity.Categorys;
+import com.yume.Entity.MapperCategorys;
 
 @Repository
 public class CategorysDao extends BaseDao {
