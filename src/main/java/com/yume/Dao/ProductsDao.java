@@ -1,5 +1,12 @@
 package com.yume.Dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.yume.Dto.ProductsDto;
+
 public class ProductsDao extends BaseDao{
 	private final boolean YES = true;
 	private final boolean NO = false;
