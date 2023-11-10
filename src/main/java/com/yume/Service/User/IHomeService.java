@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.yume.Dto.ProductsDto;
 import com.yume.Entity.Categorys;
+import com.yume.Entity.Menus;
+import com.yume.Entity.Slides;
 
 public interface IHomeService {
 	@Autowired

@@ -1,14 +1,14 @@
 package com.yume.Entity;
 
-public class Categorys {
+public class Menus {
 	private int id;
 	private String name;
-	private String description;
+	private String url;
 
-	public Categorys() {
+	public Menus() {
 		super();
 	}
-
+	
 	public int getId() {
 		return id;
 	}
@@ -25,11 +25,11 @@ public class Categorys {
 		this.name = name;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getUrl() {
+		return url;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setUrl(String url) {
+		this.url = url;
 	}
 }
