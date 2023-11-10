@@ -17,8 +17,8 @@
 	</bean>
 
 	<mvc:annotation-driven />
-	<mvc:resources mapping="/resources/**"
-		location="/WEB-INF/resources/" />
+	<mvc:resources mapping="/assets/**"
+		location="/WEB-INF/assets/" />
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
