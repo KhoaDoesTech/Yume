@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class HomeController extends BaseController{
+public class HomeUserController extends BaseController{
 	
 	@RequestMapping(value = { "/", "/trang-chu" })
 	public ModelAndView Index() {

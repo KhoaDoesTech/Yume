@@ -12,14 +12,14 @@ public class HomeController {
 	@Autowired
 	HomeDao homeDao;
 	
-	@RequestMapping(value = { "/", "/trang-chu" })
+	@RequestMapping(value = "/user/")
 	public ModelAndView Index() {
 		ModelAndView mv = new ModelAndView("user/index");
 		mv.addObject("slides", homeDao.GetDataSlide());
 		return mv;
 	}
 
-	@RequestMapping(value = "/product")
+	@RequestMapping(value = "/user/product")
 	public ModelAndView Product() {
 		ModelAndView mv = new ModelAndView("user/product");
 		return mv;
