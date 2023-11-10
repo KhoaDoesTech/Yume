@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.yume.Dto.ProductsDto;
 import com.yume.Dto.ProductsDtoMapper;
 
+@Repository
 public class ProductsDao extends BaseDao{
 	private final boolean YES = true;
 	private final boolean NO = false;
@@ -43,19 +44,12 @@ public class ProductsDao extends BaseDao{
 		StringBuffer sql = SqlString();
 		sql.append("WHERE 1 = 1 ");
 		if (highLight) {
-			sql.append("AND p.highlight = true ");
+			sql.append("AND p.highlight = 0 ");
 		}
 		if (newProduct) {
-			sql.append("AND p.new_product = true ");
+			sql.append("AND p.new_product = 0 ");
 		}
-		sql.append("GROUP BY p.id, c.id_product ");
 		sql.append("ORDER BY RAND() ");
-		if (highLight) {
-			sql.append("LIMIT 9 ");
-		}
-		if (newProduct) {
-			sql.append("LIMIT 12 ");
-		}
 		return sql.toString();
 	}
 
