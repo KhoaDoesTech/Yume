@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<base href="${pageContext.request.contextPath}/">
+<!--base href="${pageContext.request.contextPath}/"-->
 <meta charset="utf-8">
 <title><decorator:title default="Master-layout"/></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,7 +59,7 @@ Lower Header Section
 		
 		<%@include file="/WEB-INF/views/layouts/user/header.jsp" %>
 		
-		<decorator:body/>
+			<decorator:body/>
 		
 		<%@include file="/WEB-INF/views/layouts/user/footer.jsp" %>
 		
